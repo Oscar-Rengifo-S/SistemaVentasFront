@@ -1,0 +1,74 @@
+﻿
+@{
+    ViewBag.Title = "EmitirFactura";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Emitir Factura</h2>
+
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card mb-4">
+            @*<h5 class="card-header">Emitir Factura</h5>*@
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <label for="sl_serie" class="form-label">Serie</label>
+                        <select class="form-select" id="sl_serie" aria-label="Default select example">
+                            <option value="F001">F001</option>
+                            <option value="F002">F002</option>
+                        </select>
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label for="txtnum_correlativo" class="form-label">Numero Factura</label>
+                        <input type="text" class="form-control" id="txtnum_correlativo" placeholder="">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <label for="txtruc" class="form-label">ruc</label>
+                        <input class="form-control" type="text" id="txtruc" placeholder="" readonly="">
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label for="txtrazonsocial" class="form-label">razon social</label>
+                        <input type="text" readonly="" class="form-control-plaintext" id="txtrazonsocial">
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <button type="button" class="btn rounded-pill btn-primary" data-bs-toggle="modal" data-bs-target="#modalAgregarItem" id="btnNuevoCliente">Nuevo</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="table-responsive text-nowrap">
+                            <table class="table" id="tbl_factura_det">
+                                <thead>
+                                    <tr class="text-nowrap">
+                                        <th>#</th>
+                                        <th>conceptop_vta</th>
+                                        <th>Razon Social</th>
+                                        <th>can_unit_vta_det</th>
+                                        <th>imp_unit_vta_det</th>
+                                        <th>imp_precio_vta_det</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 mb-3">
+                        <label for="txtfec_emision" class="form-label">Fecha Emision</label>
+                        <input class="form-control" type="text" id="txtfec_emision" placeholder="" readonly="">
+                    </div>
+                    <div class="col-lg-3 mb-3">
+                        <label for="txtrazonsocial" class="form-label">razon social</label>
+                        <input type="text" readonly="" class="form-control-plaintext" id="txtpor_impto_venta">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
